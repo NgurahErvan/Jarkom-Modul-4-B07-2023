@@ -29,6 +29,8 @@
 
 Setelah membagi semua subnet beserta jumlah ip dan netmask pada masing masing netmask, selanjutnya kami mengumpulkan subnet yang memiliki netmask yang sama untuk memudahkan dalam membuat tree
 
+<img width="230" alt="image" src="https://github.com/NgurahErvan/Jarkom-Modul-4-B07-2023/assets/114007640/d257a28f-a5ba-4355-a513-c2657383e108">
+
 ## VLSM
 Variable Length Subnet Masking (VLSM) adalah sebuah metode pengalamatan IP yang memungkinkan pengguna untuk menggunakan subnet mask dengan panjang yang bervariasi untuk mengoptimalkan penggunaan alamat IP dalam jaringan. VLSM memungkinkan kita untuk membagi alamat IP secara lebih efisien dengan mengalokasikan blok alamat yang lebih besar untuk subnet yang membutuhkan lebih banyak host dan blok alamat yang lebih kecil untuk subnet yang membutuhkan lebih sedikit host.
 ### Tree
