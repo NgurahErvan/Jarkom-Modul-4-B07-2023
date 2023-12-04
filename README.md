@@ -217,4 +217,6 @@ Static Routing mengharuskan administrator jaringan untuk menambahkan/ memberitah
   
 ### Testing
 
+https://github.com/NgurahErvan/Jarkom-Modul-4-B07-2023/assets/114007640/c325ac4d-4feb-422c-98ba-ed4e2f0da27b
+
 ## CIDR
