@@ -1,4 +1,4 @@
-<img width="959" alt="image" src="https://github.com/NgurahErvan/Jarkom-Modul-4-B07-2023/assets/114007640/4c063f67-2aaa-4054-9a26-61a2a4f714f3"># Jarkom-Modul-4-B07-2023
+# Jarkom-Modul-4-B07-2023
 > Laporan Resmi Praktikum 4 Jaringan Komputer B07
 ***
 ## Anggota Kelompok B07
@@ -101,7 +101,6 @@ Static Routing mengharuskan administrator jaringan untuk menambahkan/ memberitah
   
   <img width="960" alt="image" src="https://github.com/NgurahErvan/Jarkom-Modul-4-B07-2023/assets/114007640/7c880aa7-dd0e-4dba-bc1b-c361c5d4677a">
 
-- Kemudian Isi satu persatu route, kemudian klik "Add" hingga seluruh route dari router tersebut ditambahkan. kami akan mencontohkan menggunakan Router Aura
 - Kemudian Isi satu persatu route, kemudian klik "Add" hingga seluruh route dari router tersebut ditambahkan. kami akan mencontohkan menggunakan Router Aura
   - Kiri
     #### A7 via Frieren
