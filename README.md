@@ -29,7 +29,7 @@
 <img width="382" alt="image" src="https://github.com/NgurahErvan/Jarkom-Modul-4-B07-2023/assets/114007640/1db3d89f-dddd-4203-9629-d165b7784466">
 
 ## Topologi GNS CIDR 
-![img](images/topoGNS.png)
+![img](Images/topoGNS.png)
 
 ## Rute
 <img width="371" alt="image" src="https://github.com/NgurahErvan/Jarkom-Modul-4-B07-2023/assets/114007640/21c4ecc2-785b-4801-b132-9eb12f640fc2">
@@ -234,55 +234,55 @@ CIDR (Classless Inter-Domain Routing) adalah metode subnetting dan routing jarin
 ### Tree
 Ini merupakan tree yang didapat dari topologi yang kita gunakan, hasil dari tree ini memerlukan beberapa proses subneting untuk beberapa subnet-subnet yang ada sehingga di dapat tree dengan pembagian IP yang efisien
 
-![img](images/treecrid.png)
+![img](Images/treecrid.png)
 
 **Perlu diketahui bahwa, Prefix IP dari kelompok kita merupakan 10.12.x.x , namun dikarenakan mask yang sangat kecil atau nilai ip yang dangat besar, maka terjadi pergeseran IP sehingga prefix IP dari kelompok kita menjadi 10.8.x.x . hal tersebut dikarenakan mask /13, memerlukan bits kedua pada ip yang dimana hal tersebut berpengaruh pada IP prefix kelompok, sehingga output yang dapat digunakan adalah 10.8.x.x .**
 
 Sebelum menentukan tree tersebut, kita melakukan pengelompokan pada topologi yang kita gunakan, dengan gambaran seperti berikut
 
-![img](images/subnetingcrid.png)
+![img](Images/subnetingcrid.png)
 
 Pengelompokan tersebut terlihat sangat sulit untuk dipahami, jadi subneting dari VLSM dilakukan subneting lagi menjadi bagian subnet yang lebih besar dan secara bertahap, pada topologi ini, kita melakukan pembagian menjadi 2 subneting besar kemudian baru menjadikannya 1 di akhir dan menghitung mask dari total subneting yang telah dibuat, gambaran sederhana dari hasil subneting tersebut dapat dilihat pada gambar berikut.
 
-![img](images/subnetingcrid2.png)
+![img](Images/subnetingcrid2.png)
 
 penjelasan singkat, misal pada bagian kiri, A6 dan A5 digabung menjadi sebuah subnet, kemudian dibandingkan mask dari kedua tersebut, dan didapat mask yang paling kecil adalah /29, dengan rumus CIDR maka harus dilakukan pengurangan 1 pada mask tersebut, sehingga didapat subnet B1 dengan mask /28. kemudian langkah selanjutnya, pada subnet B1 dilakukan subneting lagi dengan node sebelahnya yaitu A3, dan dibandingkan untuk mask kedua node tersebut, didapat /22, dan dengan rumus CIDR maka dikurangi 1 pada mask tersebut menjadi /21. begitu seterusnya hingga didapat subnet terbesar yaitu K1 dengan mask /13 yang menggabungkan antara 2 bagian subnet yang telah dibuat sebelumnya. 
 
 ### Pengelompokan Subnet
 Dengan perhitungan yang didapat pengelompokan subnet yang didapatkan sebagai berikut.
-![img](images/merge1.png)
-![img](images/merge2.png)
-![img](images/merge3.png)
+![img](Images/merge1.png)
+![img](Images/merge2.png)
+![img](Images/merge3.png)
 
 ### Pembagian IP
 Dengan pengelompokan tersebut, dapat didapatkan pembagian IP pada masing masing node sebagai berikut.
 
-![img](images/ip.png)
+![img](Images/ip.png)
 
 ### Konfigurasi Network
 Konfigurasi network pada GNS3 dapat dilakukan dengan cara membagikan ip dan netmask statics ke masing masing node untuk dilakukan inisialisasi IP agar node tersebut dapat dikenali oleh node yang lain dan dapat saling terhubung. IP yang dibagikan dapat diambil dari perhitungan CIDR yang telah dilakukan sebelumnya dengan menggunakan range usable ip yang dapat digunakan. berikut merupakan contoh yang dapat kami berikan pada node Aura. 
 
 - Aura
-![img](images/auraconfig1.png)
-![img](images/auraconfig2.png)
+![img](Images/auraconfig1.png)
+![img](Images/auraconfig2.png)
 
 - Frieren
-![img](images/frierenconfig.png)
+![img](Images/frierenconfig.png)
 
 - Eisen
-![img](images/eisenconfig1.png)
-![img](images/eisenconfig2.png)
+![img](Images/eisenconfig1.png)
+![img](Images/eisenconfig2.png)
 
 - Denken
-![img](images/denkenconfig.png)
+![img](Images/denkenconfig.png)
 
 Semua pembagian Ip pada router juga berlaku sesuai dengan pembagian ip yang sudah dilakukan perhitungan sebelumnya. pengaturan config juga dilakukan pada edge device atau ujung dari setiap topoligi entah itu client maupun server. berikut contoh node lanjutan client dari denken.
 
 - Royal Capital (63 Host)
-![img](images/royalcapitalconfig.png)
+![img](Images/royalcapitalconfig.png)
 
 - Wile Region (63 Host)
-![img](images/wileregionconfig.png)
+![img](Images/wileregionconfig.png)
 
 Konfigurasi dilakukan pada semua node yang ada dari router sampai client maupun server, semua dilakukan dengan pembagian IP yang telah dilakukan.
 
@@ -304,7 +304,7 @@ route -n
 ```
 maka akan muncul list route yang telah ditambahkan seperti berikut
 
-![img](images/routelist.png)
+![img](Images/routelist.png)
 
 untuk melakukan static routing disesuaikan dengan daftar NID yang ada. Semakin banyak NID dalam suatu topologi, semakin banyak pula rute yang perlu ditambahkan ke router, maka diperlukan teknik pengelompokkan (Subnetting) yang tepat untuk menyederhanakan Routing.
 
