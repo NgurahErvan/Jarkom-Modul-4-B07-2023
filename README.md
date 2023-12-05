@@ -302,7 +302,6 @@ setelah melakukan command tersebut dapat dilakukan pengecekan dengan menggunakan
 ```
 route -n
 ```
-
 maka akan muncul list route yang telah ditambahkan seperti berikut
 
 ![img](images/routelist.png)
